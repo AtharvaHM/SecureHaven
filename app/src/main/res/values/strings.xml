@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Secure Haven</string>
+    <string name="subtitle">An anti-theft application for android</string>
+    <string name="login_email">Email Address</string>
+    <string name="login_pwd">Password</string>
+    <string name="login_login">Login</string>
+    <string name="login_forgot_pwd">Forgot Password?</string>
+    <string name="login_register">New user? Click here to Register</string>
+    <string name="register_register">Register</string>
+    <string name="register_login">Already have an account? Sign in!</string>
+    <string name="reset_password_reset_password">Reset Password</string>
+    <string name="register_email">Email Address</string>
+    <string name="register_pwd">Password</string>
+    <string name="register_contact">Primary Contact No.</string>
+    <string name="register_name">Full Name</string>
+    <string name="reset_password_email">Email Address</string>
+    <string name="reset_password_back"><![CDATA[<<Back]]></string>
+    <string name="signout">Sign Out</string>
+    <string name="logout">Logout</string>
+    <string name="dashboard_camera">Camera</string>
+    <string name="dashboard_imeiDB">IMEI Database</string>
+    <string name="dashboard_sms">SMS Commands</string>
+    <string name="dashboard_location">Location Tracking</string>
+    <string name="dashboard_profile">User Profile</string>
+    <string name="minimum_password">Minimum password length should be 6 characters</string>
+    <string name="auth_failed">Login failed! Please try again.</string>
+    <string name="profile_profile">User Profile</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="maps_back"><![CDATA[<<Back]]></string>
+</resources>
