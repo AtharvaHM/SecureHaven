@@ -27,4 +27,10 @@
     <string name="profile_profile">User Profile</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="maps_back"><![CDATA[<<Back]]></string>
+    <string name="maps_latitude">Latitude:</string>
+    <string name="maps_longitude">Longitude:</string>
+    <string name="maps_update">Update\nLocation</string>
+    <string name="imei_main_imei">IMEI Database</string>
+    <string name="imei_main_back"><![CDATA[<<Back]]></string>
+    <string name="imei_main_lost">Register device as lost</string>
 </resources>

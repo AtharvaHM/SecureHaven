@@ -14,8 +14,8 @@ import org.json.JSONException;
 import java.sql.Timestamp;
 
 public class MailSend {
-    static String HTMLContent="Temp",base64send;
-    String timestamp=String.valueOf(new Timestamp(System.currentTimeMillis())); //Get the current time-stamp
+    static String HTMLContent = "Temp", base64send;
+    String timestamp = String.valueOf(new Timestamp(System.currentTimeMillis())); //Get the current time-stamp
     MailSend(String base64){
 
         //This uses a pre-defined HTML template for body of the e-mail

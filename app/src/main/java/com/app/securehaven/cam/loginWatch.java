@@ -3,9 +3,11 @@ package com.app.securehaven.cam;
 import android.app.admin.DeviceAdminReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.util.Log;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 
 public class loginWatch extends DeviceAdminReceiver {
 
@@ -30,25 +32,18 @@ public class loginWatch extends DeviceAdminReceiver {
     /***
      * This method will be called everytime an incorrect PIN is entered
      */
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onPasswordFailed(@NonNull Context context, @NonNull Intent intent) {
         super.onPasswordFailed(context, intent);
         SecurityService.failedPasswordCount++;
-        /**
-         * If the incorrect password count is odd
-         * Then create a new thread, take a picture, convert picture to Base64
-         * and send it
-         */
         if(SecurityService.failedPasswordCount%2!=0){
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    CameraHandler camString=new CameraHandler();
-                    String encoded64=camString.takePic();
-                    new MailSend(encoded64);
-                    Log.d("loginWatch-passFailed", String.valueOf(SecurityService.failedPasswordCount));
-                    Log.d("loginWatch-passFailed",encoded64);
-                }
+            new Thread(() -> {
+                CameraHandler camString=new CameraHandler();
+                String encoded64=camString.takePic();
+                new MailSend(encoded64);
+                Log.d("loginWatch-passFailed", String.valueOf(SecurityService.failedPasswordCount));
+                Log.d("loginWatch-passFailed",encoded64);
             }).start();
         }
     }

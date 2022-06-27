@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 
 import com.app.securehaven.auth.LoginActivity;
 import com.app.securehaven.cam.CameraMainActivity;
+import com.app.securehaven.imei.ImeiMainActivity;
 import com.app.securehaven.track.MapsActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -46,11 +47,11 @@ public class DashboardActivity extends AppCompatActivity {
             startActivity(i);
         });
 
-//        imeiCard.setOnClickListener(v -> {
-//            Intent i = new Intent(DashboardActivity.this, LoginActivity.class);
-//            finish();
-//            startActivity(i);
-//        });
+        imeiCard.setOnClickListener(v -> {
+            Intent i = new Intent(DashboardActivity.this, ImeiMainActivity.class);
+            finish();
+            startActivity(i);
+        });
 
 //        smsCard.setOnClickListener(v -> {
 //            Intent i = new Intent(DashboardActivity.this, LoginActivity.class);
